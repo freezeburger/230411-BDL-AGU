@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'bdl-workspace';
+ 
+  public messages:any = [];
+
+  public getData(){
+    fetch('http://localhost:5050/messages')
+         .then(res => res.json() )
+         .then( data => this.messages = data );
+  }
 }
