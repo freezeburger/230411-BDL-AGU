@@ -12,4 +12,8 @@ export class MessageService {
          .then(res => res.json() )
          .then( data => this.messages = data );
   }
+
+  public reset(){
+    this.messages = [];
+  }
 }

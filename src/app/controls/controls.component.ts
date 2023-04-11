@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-controls',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./controls.component.scss']
 })
 export class ControlsComponent {
+  constructor(
+    // @Inject(MessageService) public srv: MessageService
+    public srv: MessageService
+  ) { }
 
 }

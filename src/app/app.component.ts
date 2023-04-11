@@ -8,9 +8,6 @@ import { MessageService } from './services/message.service';
 })
 export class AppComponent {
 
-  constructor(
-    // @Inject(MessageService) public srv: MessageService
-    public srv: MessageService
-  ) { }
+  home = true;
 
 }
