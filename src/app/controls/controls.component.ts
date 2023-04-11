@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MessageService } from '../services/message.service';
 
 @Component({
@@ -7,9 +7,11 @@ import { MessageService } from '../services/message.service';
   styleUrls: ['./controls.component.scss']
 })
 export class ControlsComponent {
-  constructor(
-    // @Inject(MessageService) public srv: MessageService
-    public srv: MessageService
-  ) { }
 
+  @Input() public disabled = false;
+  @Input() public actionLabel = 'Action Text';
+  @Input() public cancelLabel = 'Cancel Text';
+
+  @Output() public action = new EventEmitter();
+  @Output() public cancel = new EventEmitter();
 }

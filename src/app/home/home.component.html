@@ -1,8 +1,17 @@
-<app-header></app-header>
+<app-header> Home </app-header>
 
-<app-alert></app-alert>
+<app-alert [visible]="srv.messages.length === 0 ">
+  Cliquez sur le bouton de chargement...
+</app-alert>
 
-<app-list></app-list>
+<app-list [messages]="srv.messages"></app-list>
 
-<app-controls></app-controls>
+<app-controls
+  [disabled]=" srv.messages.length !== 0 "
+  actionLabel="Charger"
+  cancelLabel="Effacer"
+  (action)="srv.getData()"
+  (cancel)="srv.reset()"
+  >
+</app-controls>
 

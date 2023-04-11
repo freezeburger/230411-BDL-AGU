@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MessageService } from '../services/message.service';
 
 @Component({
@@ -7,9 +7,8 @@ import { MessageService } from '../services/message.service';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-  constructor(
-    // @Inject(MessageService) public srv: MessageService
-    public srv: MessageService
-  ) { }
+
+  @Input()
+  public messages:any[] = [];
 
 }

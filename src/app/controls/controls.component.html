@@ -2,13 +2,13 @@
  <!-- app-controls -->
  <button
  class="btn btn-primary m-1"
- (click)=" srv.getData() "
- [disabled]=" srv.messages.length > 0  ">
- Charger les données
+ (click)=" action.emit() "
+ [disabled]=" disabled ">
+  {{actionLabel}}
 </button>
 
 <button
  class="btn btn-danger m-1"
- (click)=" srv.reset() " >
-Effacer
+ (click)=" cancel.emit() " >
+ {{cancelLabel}}
 </button>

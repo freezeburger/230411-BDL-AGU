@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { MessageService } from '../services/message.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-alert',
@@ -7,9 +6,6 @@ import { MessageService } from '../services/message.service';
   styleUrls: ['./alert.component.scss']
 })
 export class AlertComponent {
-  constructor(
-    // @Inject(MessageService) public srv: MessageService
-    public srv: MessageService
-  ) { }
-
+  @Input()
+  public visible = true;
 }
