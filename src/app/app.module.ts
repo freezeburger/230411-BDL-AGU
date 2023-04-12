@@ -14,6 +14,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FormsModule } from '@angular/forms';
 import { ConnectionComponent } from './connection/connection.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { UtilsModule } from './utils/utils.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
     FormsModule,
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    UtilsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
