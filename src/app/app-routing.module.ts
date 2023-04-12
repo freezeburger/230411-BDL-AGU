@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EditionComponent } from './edition/edition.component';
+import { ConnectionComponent } from './connection/connection.component';
 
 const routes: Routes = [
   {
@@ -21,10 +22,19 @@ const routes: Routes = [
     }
   },
   {
+    path:'connection',
+    component:ConnectionComponent,
+    title:'BDl - Identification',
+    data:{
+      linkLabel:'Login'
+    }
+  },
+  {
     path:'**',
     redirectTo:'home',
     pathMatch:'full'
   }
+
 ];
 
 @NgModule({

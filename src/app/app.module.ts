@@ -11,6 +11,9 @@ import { ControlsComponent } from './controls/controls.component';
 import { HomeComponent } from './home/home.component';
 import { EditionComponent } from './edition/edition.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { FormsModule } from '@angular/forms';
+import { ConnectionComponent } from './connection/connection.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +24,12 @@ import { NavigationComponent } from './navigation/navigation.component';
     ControlsComponent,
     HomeComponent,
     EditionComponent,
-    NavigationComponent
+    NavigationComponent,
+    ConnectionComponent,
+    LoginFormComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule

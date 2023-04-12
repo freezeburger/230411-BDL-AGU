@@ -1,0 +1,24 @@
+<app-header>
+  Login
+  <app-navigation></app-navigation>
+</app-header>
+
+<app-alert>Identifiez-vous</app-alert>
+
+<code>{{credentials | json}}</code>
+
+<app-login-form
+
+  [email]="credentials.email"
+  (emailChange)=" credentials.email = $event "
+
+  [(password)]="credentials.password"
+
+  ></app-login-form>
+
+<app-controls
+  (action)=" login() "
+  (cancel)=" cancel() "
+  actionLabel="Connection"
+  cancelLabel="Reset"
+  ></app-controls>

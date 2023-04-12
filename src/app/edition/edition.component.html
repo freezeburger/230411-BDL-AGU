@@ -2,11 +2,26 @@
   Edition <app-navigation></app-navigation>
 </app-header>
 
-
 <app-alert>Créez ici vos messages...</app-alert>
 
-<p>edition works!</p>
+<div class="p-2">
+
+ <!--  {{ msgText }} -->
+  <input
+    (keyup.enter)=" send() "
+    [(ngModel)]="msgText"
+    placeholder="Your text message..."
+    minlength="3"
+    required
+    class="form-control">
+
+  <app-controls (action)=" send() "
+                (cancel)=" empty() "
+                actionLabel="Envoyer"
+                cancelLabel="Réinitialiser">
+  </app-controls>
+
+</div>
 
 
-<app-controls actionLabel="Envoyer" cancelLabel="Réinitialiser">
-</app-controls>
+
