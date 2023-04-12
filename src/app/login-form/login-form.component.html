@@ -1,5 +1,5 @@
 
-
+<!--
 <div class="d-flex flex-column p-3">
   <input type="text" class="form-control m-1"
     placeholder="Email"
@@ -11,5 +11,17 @@
     placeholder="Password"
     [ngModel]="password"
     (ngModelChange)="passwordChange.emit($event)">
-</div>
+</div> -->
 
+<div class="d-flex flex-column p-3">
+
+  <input type="text" class="form-control m-1"
+    placeholder="Email"
+    [(ngModel)]="user.email"
+    >
+
+  <input type="text" class="form-control m-1"
+    placeholder="Password"
+    [(ngModel)]="user.password">
+
+</div>

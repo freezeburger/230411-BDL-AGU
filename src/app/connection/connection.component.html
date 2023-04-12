@@ -7,14 +7,16 @@
 
 <code>{{credentials | json}}</code>
 
-<app-login-form
+<app-login-form [user]="credentials"></app-login-form>
+
+<!-- <app-login-form
 
   [email]="credentials.email"
   (emailChange)=" credentials.email = $event "
 
   [(password)]="credentials.password"
 
-  ></app-login-form>
+  ></app-login-form> -->
 
 <app-controls
   (action)=" login() "
