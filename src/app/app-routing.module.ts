@@ -6,11 +6,19 @@ import { EditionComponent } from './edition/edition.component';
 const routes: Routes = [
   {
     path:'home',
-    component:HomeComponent
+    component:HomeComponent,
+    title:'BDl - Home',
+    data:{
+      linkLabel:'Retour Home'
+    }
   },
   {
     path:'edition',
-    component:EditionComponent
+    component:EditionComponent,
+    title:'BDl - Edition',
+    data:{
+      linkLabel:'Edition'
+    }
   },
   {
     path:'**',

@@ -1,4 +1,10 @@
 <!-- app-header -->
 <nav class="navbar bg-primary text-white p-2">
-  <h1>BDL : <ng-content></ng-content></h1>
+  <h1>BDL : <ng-content></ng-content> </h1>
 </nav>
+  <!--
+    <ng-content select="CSS Selector"></ng-content>
+    https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Selectors
+  -->
+  <ng-content select="app-navigation"></ng-content>
+<hr>

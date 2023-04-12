@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,7 @@ import { ListComponent } from './list/list.component';
 import { ControlsComponent } from './controls/controls.component';
 import { HomeComponent } from './home/home.component';
 import { EditionComponent } from './edition/edition.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { EditionComponent } from './edition/edition.component';
     ListComponent,
     ControlsComponent,
     HomeComponent,
-    EditionComponent
+    EditionComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

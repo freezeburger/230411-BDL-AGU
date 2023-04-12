@@ -1,0 +1,15 @@
+<!-- <a class="m-1"
+   *ngFor="let route of routes"
+   [routerLink]="['/', route.path]"
+   >
+  {{ route.path }}
+  </a> -->
+
+
+<a class="m-1"
+   *ngFor="let route of routes"
+   [routerLink]="['/', route.path]"
+   >
+  {{ route.data && route.data['linkLabel'] }}
+  </a>
+
