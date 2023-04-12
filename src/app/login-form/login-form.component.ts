@@ -8,11 +8,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class LoginFormComponent {
 
   @Input() user:any = {};
-/*
+  /*
   @Input() email = '';
   @Output() emailChange = new EventEmitter();
 
   @Input() password ='';
-  @Output() passwordChange = new EventEmitter(); */
+  @Output() passwordChange = new EventEmitter();
+  */
 
 }

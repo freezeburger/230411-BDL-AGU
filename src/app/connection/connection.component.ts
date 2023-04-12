@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-connection',
@@ -7,11 +8,20 @@ import { Component } from '@angular/core';
 })
 export class ConnectionComponent {
 
+  constructor(private auth:AuthService){}
+
   credentials = {
-    email:'A',
-    password:'B'
+    email:'',
+    password:''
   }
 
-  login(){}
-  cancel(){}
+  login(){
+    this.auth.login(this.credentials)
+  }
+  cancel(){
+    this.credentials = {
+      email:'',
+      password:''
+    }
+  }
 }
