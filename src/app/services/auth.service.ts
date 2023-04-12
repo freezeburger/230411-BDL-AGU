@@ -10,8 +10,8 @@ export class AuthService {
   constructor() { }
 
   login( credentials:{email:string, password:string}){
-
-    this.user = credentials;
+    // Verification
+    this.user = Object.assign({},credentials);
     console.table( this.user);
   }
 }
