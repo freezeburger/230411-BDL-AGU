@@ -1,6 +1,7 @@
 
  <!-- app-controls -->
  <button
+ appZoom
  class="btn btn-primary m-1"
  (click)=" action.emit() "
  [disabled]=" disabled ">
@@ -8,6 +9,7 @@
 </button>
 
 <button
+  appZoom
  class="btn btn-danger m-1"
  (click)=" cancel.emit() " >
  {{cancelLabel}}

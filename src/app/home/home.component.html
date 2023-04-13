@@ -7,7 +7,11 @@
   Cliquez sur le bouton de chargement...
 </app-alert>
 
-<app-list [messages]="srv.messages"></app-list>
+<div class="m-3">
+  <input appZoom [(ngModel)]="searchText" class="form-control" placeholder="Filter...">
+</div>
+
+<app-list [messages]="srv.messages | searchByText:searchText  "></app-list>
 
 <app-controls
   [disabled]=" srv.messages.length !== 0 "

@@ -7,6 +7,9 @@ import { MessageService } from '../services/message.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  searchText = '';
+
   constructor(
     public srv: MessageService
   ) { }
